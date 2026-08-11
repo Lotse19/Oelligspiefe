@@ -1,0 +1,5 @@
+/* Heller Vereinsgrün-Verlauf ohne gelben Lichtschein */
+header,
+.subpage header {
+  background: linear-gradient(105deg, #075226 0%, #087532 52%, #15904b 100%) !important;
+}

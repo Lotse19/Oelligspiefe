@@ -1,0 +1,50 @@
+/* Version 05: alle Hauptinhalte auf einer Seite */
+.onepage-section { padding: 110px 0; background: white; }
+.onepage-section.alt { background: var(--cream); }
+.onepage-heading { display: grid; grid-template-columns: 1fr .7fr; align-items: end; gap: 60px; margin-bottom: 48px; }
+.onepage-heading .label { margin-bottom: 14px; }
+.onepage-heading h2 { margin: 0; font-size: clamp(42px, 5vw, 68px); }
+.onepage-heading h2 em { color: var(--red); font-style: italic; }
+.onepage-heading > p { color: var(--muted); }
+.detail-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 25px; }
+.detail-card { padding: 34px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 12px 32px #063a1d0e; }
+.detail-card.dark { background: var(--brown); color: white; }
+.detail-card.yellow { background: var(--yellow); color: var(--ink); }
+.detail-card h3 { margin: 0 0 15px; color: var(--red); font-size: 30px; }
+.detail-card.dark h3 { color: var(--yellow); }
+.detail-card p { color: var(--muted); }
+.detail-card.dark p { color: #d5e1d9; }
+.detail-card ul { padding: 0; list-style: none; }
+.detail-card li { margin: 10px 0; }
+.detail-card li::before { content: "✓"; margin-right: 10px; color: var(--red); font-weight: 700; }
+.detail-card.dark li::before { color: var(--yellow); }
+.detail-card a { display: inline-block; margin-top: 12px; padding-bottom: 4px; border-bottom: 1px solid currentColor; font-weight: 700; }
+.age-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 20px; }
+.age-row span { padding: 18px; border-radius: 15px; background: var(--cream); text-align: center; font-weight: 700; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.team-grid article { min-height: 170px; padding: 25px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+.team-grid span { color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; }
+.team-grid h3 { margin: 10px 0; font-size: 21px; }
+.team-grid a { overflow-wrap: anywhere; color: var(--muted); font-size: 11px; }
+.onepage-sponsors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.onepage-sponsors span { display: grid; place-items: center; min-height: 95px; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: white; color: var(--brown); text-align: center; font-weight: 700; }
+.onepage-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.onepage-contact .detail-card a { display: block; width: max-content; max-width: 100%; overflow-wrap: anywhere; }
+
+/* Neun Menüpunkte bleiben kompakt und stabil in einer Zeile. */
+.nav nav { gap: 16px; font-size: 11px; white-space: nowrap; }
+.nav nav a.section-active { color: var(--yellow); }
+
+@media (max-width: 1000px) and (min-width: 821px) {
+  .brand small { display: none; }
+  .nav nav { gap: 10px; font-size: 10px; }
+}
+@media (max-width: 820px) {
+  .onepage-heading, .detail-grid, .onepage-contact { grid-template-columns: 1fr; }
+  .team-grid, .onepage-sponsors { grid-template-columns: repeat(2, 1fr); }
+  .onepage-section { padding: 80px 0; }
+  .nav nav { gap: 20px; font-size: 20px; white-space: normal; }
+}
+@media (max-width: 500px) {
+  .team-grid, .onepage-sponsors, .age-row { grid-template-columns: 1fr; }
+}

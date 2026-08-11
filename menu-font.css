@@ -1,0 +1,17 @@
+/* Ursprüngliche Menütypografie aus Version 03 */
+.nav nav {
+  gap: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+@media (max-width: 1050px) and (min-width: 821px) {
+  .nav nav { gap: 9px; font-size: 12px; }
+  .brand small { display: none; }
+}
+
+@media (max-width: 820px) {
+  .nav nav { gap: 20px; font-size: 20px; font-weight: 600; }
+}

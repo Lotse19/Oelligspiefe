@@ -1,0 +1,23 @@
+/* Sticky navigation for every page */
+header,
+.subpage header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(6, 58, 29, .97);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+  backdrop-filter: blur(10px);
+}
+
+.hero { padding-top: 45px; }
+.subpage .page-hero { padding-top: 80px; }
+.subpage .legal { padding-top: 80px; }
+
+[id] { scroll-margin-top: 115px; }
+
+@media (max-width: 820px) {
+  .subpage .page-hero { padding-top: 65px; }
+  .subpage .legal { padding-top: 65px; }
+  [id] { scroll-margin-top: 95px; }
+}

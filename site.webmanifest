@@ -1,0 +1,15 @@
+{
+  "name": "Vochemer KG Ölligspiefe 1978 e.V.",
+  "short_name": "Ölligspiefe",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#063a1d",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
